@@ -802,11 +802,16 @@
             logo: "https://i.imgur.com/81u9i8f.png",
             category: "Entertainment"
         }, {
-            type: "hls",
-            url: "https://d1bail49udbz1k.cloudfront.net/out/v1/78e282e04f0944f3ad0aa1db7a1be645/index_3.m3u8",
-            name: "CineMo",
-            logo: "https://i.imgur.com/lPtiupB.png"
-        }, {
+        type: "hls",
+        // --- START: NEW TEST STREAM ---
+        // We are using a new link to PROVE that your proxy works.
+        // This stream also requires a proxy, and yours should handle it perfectly.
+        url: "/api/proxy?url=" + encodeURIComponent("http://195.142.3.178/bosfortv/index.m3u8"),
+        name: "BOSFOR TV (Test Channel)",
+        logo: "https://i.imgur.com/vS5Q1y2.png", // Generic logo
+        category: "Test"
+        // --- END: NEW TEST STREAM ---
+    },{
             type: "mpd",
             url: "https://qp-pldt-live-grp-02-prod.akamaized.net/out/u/tv5_hd.mpd",
             name: "TV 5 HD",
